@@ -1,18 +1,20 @@
 from django.contrib import admin
 from django.urls import path
 
+
 from post_api.views import (
-    get_post,
-    create_post,
-    get_post_by_id,
-    update_post,
-    delete_post,
+    GetAllPost,
+    CreatePost,
+    GetPostById,
+    UpdatePost,
+    DeletePost,
 )
 
+
 urlpatterns = [
-    path("", get_post),
-    path("create", create_post),
-    path("<int:id>", get_post_by_id),
-    path("update/<int:id>", update_post),
-    path("delete/<int:id>", delete_post),
+    path("", GetAllPost.as_view()),
+    path("create", CreatePost.as_view()),
+    path("<int:id>", GetPostById.as_view()),
+    path("update/<int:id>", UpdatePost.as_view()),
+    path("delete/<int:id>", DeletePost.as_view()),
 ]
