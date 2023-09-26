@@ -1,1 +1,1 @@
-# this is a practie DJANGO REST app
+# this is a practice DJANGO REST app
